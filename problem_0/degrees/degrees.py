@@ -152,9 +152,6 @@ def shortest_path(source, target):
 
 
 
-
-
-
 def person_id_for_name(name):
     """
     Returns the IMDB id for a person's name,
