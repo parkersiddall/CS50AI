@@ -92,15 +92,12 @@ def shortest_path(source, target):
     If no possible path, returns None.
     """
 
-    # TODO
-
     # start with frontier that contains the initial state
     start = Node(source, None, None)
 
     # add starting node to frontier
     frontier = QueueFrontier()
     frontier.add(start)
-
 
     # create empty explored set
     explored_set = set()
@@ -121,7 +118,6 @@ def shortest_path(source, target):
         # expand the node (look at neighbors), add resulting nodes to the frontier IF they aren't in explored set OR in the frontier already
         # pull out neighbors
         neighbors = neighbors_for_person(node.state)
-
 
         # loop through neigbors
         for neighbor in neighbors:
@@ -147,7 +143,6 @@ def shortest_path(source, target):
                     node = node.parent
 
                 # return solution
-               
                 return path
                 
             # if not target, add notes to the frontier
